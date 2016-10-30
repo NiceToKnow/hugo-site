@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html lang="{{ with .Site.LanguageCode}}{{ . }}{{ else }}en-US{{end}}">
+<head>
+	<meta charset="UTF-8">
+	<title>{{ if .IsPage }}{{ .Menus.main.Name }} &middot; {{ end }}{{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ .Site.BaseURL }}css.css" type="text/css" >
+</head>
+<body >
+
+{{ range where .Data.Pages "Title" "Home" }}
+    {{ .Content }}
+{{ end }}
+
+</body>
+</html>
