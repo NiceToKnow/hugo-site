@@ -2,8 +2,10 @@
 
 echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 
+echo -e "\033[2m"
 # Build the project.
-hugo # if using a theme, replace by `hugo -t <yourtheme>`
+hugo
+echo -e "\033[0m"
 
 # Go To Public folder
 cd public
@@ -13,8 +15,14 @@ git add -A
 # Commit changes.
 msg="rebuilding site `date`"
 if [ $# -eq 1 ]
-  then msg="$1"
+    then msg="$1"
+else
+    echo -e "\033[1mCommit message: "
+    read newmsg
+    echo -e "\033[0m"
+    msg=newmsg
 fi
+
 git commit -m "$msg"
 
 # Push source and build repos.
