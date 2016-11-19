@@ -23,7 +23,7 @@ h2 {
 }
 
 code {
-    background-color: #f8f8f8;
+    background-color: #EEE;
     color: rgb(51, 51, 51);
     font-family: Consolas, 'Liberation Mono', Menlo, Courier, monospace;
 }
@@ -49,7 +49,7 @@ pre code {
 }
 
 pre {
-    background-color: #f8f8f8;
+    background-color: #EEE;
     padding: .8rem;
     border-radius: 0.3rem;
     overflow: scroll;
